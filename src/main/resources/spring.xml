@@ -3,40 +3,16 @@
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 	
-	<bean name="emp1" class="java_spring.com.entity.Employee" autowire="byName">
+	<bean name="emp1" class="java_spring.com.entity.Employee" autowire="byType" scope="prototype">
 		<property name="id" value="1"/>
-		<property name="name" value="Amar"/>
-		<property name="gender" value="Male"/>
-		<property name="salary" value="200000"/>
-		<property name="address" ref="add1"/>
-	</bean>
-	
-	<bean name="emp2" class="java_spring.com.entity.Employee" autowire="byType">
-		<property name="id" value="2"/>
 		<property name="name" value="Amar Giri"/>
 		<property name="gender" value="Male"/>
 		<property name="salary" value="250000"/>
-	</bean>
-	
-	<bean name="emp3" class="java_spring.com.entity.Employee" autowire="constructor">
-		<constructor-arg name="id" value="3"/>
-		<constructor-arg name="name" value="Amar Goswami"/>
-		<constructor-arg name="gender" value="Male"/>
-		<constructor-arg name="salary" value="300000"/>
 	</bean>
 	
 	<bean name="add1" class="java_spring.com.entity.Address">
 		<constructor-arg name="city" value="Meerut"/>
 		<constructor-arg name="state" value="UP"/>
 	</bean>
-	
- <!--
-  	
-	<bean name="add2" class="java_spring.com.entity.Address">
-		<property name="city" value="Noida"/>
-		<property name="state" value="UP"/>
-	</bean>
-	
--->
 	
 </beans>
