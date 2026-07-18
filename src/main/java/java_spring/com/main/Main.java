@@ -2,7 +2,7 @@ package java_spring.com.main;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import java_spring.com.entity.Address;
+import java_spring.com.entity.Address1;
 import java_spring.com.entity.Employee;
 
 public class Main {
@@ -17,7 +17,7 @@ public class Main {
 		
 		System.out.println("===================================================================================================");		
 		
-		Address address = ioc.getBean(Address.class);
+		Address1 address = ioc.getBean(Address1.class);
 		
 		System.out.println(address);
 	
